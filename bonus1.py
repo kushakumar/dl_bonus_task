@@ -10,8 +10,6 @@ data = pd.read_csv(data_path)
 with open('logistic_regression.pkl', 'rb') as file:
     model = pickle.load(file)
 
-with open('one_hot_encoder.pkl', 'rb') as enc_file:
-    encoder = pickle.load(enc_file)
 
 council_district_options = sorted(data['COUNCIL DISTRICT'].dropna().unique())
 council_district_2011_options = sorted(data['Council District 2011'].dropna().unique())
